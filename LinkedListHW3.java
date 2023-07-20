@@ -37,7 +37,6 @@ public class LinkedListHW3 {
             this.phone = phone;
         }
 
-        @Override
         public String toString() {
             return "Contact{" +
                     "id=" + id +
@@ -51,17 +50,14 @@ public class LinkedListHW3 {
         ListItem<T> head;
         ListItem<T> tail;
 
-        @Override
         public Iterator iterator() {
             return new Iterator<T>() {
                 ListItem<T> current = head;
 
-                @Override
                 public boolean hasNext() {
                     return current != null;
                 }
 
-                @Override
                 public T next() {
                     T data = current.data;
                     current = current.next;
